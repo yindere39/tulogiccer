@@ -21,5 +21,16 @@ public class Country {
 
     @Column(name = "REGION_ID")
     private Integer RegionId;
+    public Country() {
+    }
 
+    public Country(String countryId, String countryName, Integer regionId) {
+        CountryId = countryId;
+        CountryName = countryName;
+        RegionId = regionId;
+    }
+    @Override
+    public String toString() {
+        return "COUNTRIES [COUNTRY_ID=" + CountryId + ", COUNTRY_NAME=" + CountryName + ", REGION_ID=" + RegionId + "]";
+    }
 }
